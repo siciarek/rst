@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Podstawowe elementy &mdash; Dokumentacja generowana przez Sphinx DocUtils 1.0 - dokumentacja</title>
+    
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <link rel="top" title="Dokumentacja generowana przez Sphinx DocUtils 1.0 - dokumentacja" href="../index.html" />
+    <link rel="next" title="2. Nagłówki" href="headers.html" />
+    <link rel="prev" title="Dokumentacja generowana przez Sphinx DocUtils" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Nawigacja</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Indeks ogólny"
+             accesskey="I">indeks</a></li>
+        <li class="right" >
+          <a href="headers.html" title="2. Nagłówki"
+             accesskey="N">dalej</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Dokumentacja generowana przez Sphinx DocUtils"
+             accesskey="P">wstecz</a> |</li>
+        <li><a href="../index.html">Dokumentacja generowana przez Sphinx DocUtils 1.0 - dokumentacja</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="podstawowe-elementy">
+<h1>1. Podstawowe elementy<a class="headerlink" href="#podstawowe-elementy" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Dokumentacja niniejsza jest generowana z plików w formacie <tt class="docutils literal"><span class="pre">reStructuredText</span></tt>, w dokumencie omówione zostały
+najbardziej przydatne elementy formatu.</p>
+<p>Więcej na stronie <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html</a></p>
+<p><tt class="docutils literal"><span class="pre">reStructuredText</span></tt> jest plikiem w formacie <tt class="docutils literal"><span class="pre">text/plain</span></tt> zawierającym dodatkowe elementy określające strukturę dokumentu.</p>
+<p>System generujący dokumentację to <tt class="docutils literal"><span class="pre">SPHINX</span> <span class="pre">Python</span> <span class="pre">Documentation</span> <span class="pre">Generator</span></tt> powstał początkowo na potrzeby dokumentacji
+języka programowania <tt class="docutils literal"><span class="pre">Python</span></tt> (funkcjonalność zbliżona do <tt class="docutils literal"><span class="pre">javadoc</span></tt>, <tt class="docutils literal"><span class="pre">phpdoc</span></tt> itp.) lecz po wprowadzeniu
+obsługi koloryzatorów składni <tt class="docutils literal"><span class="pre">Pygments</span></tt> i zestawu narzędzi <tt class="docutils literal"><span class="pre">Sphinx</span> <span class="pre">DocUtils</span></tt>
+jest użyteczny do generowania dowolnego rodzaju dokumentacji, nie tylko programistycznej.</p>
+<p>Więcej na stronie <a class="reference external" href="http://sphinx-doc.org/contents.html">http://sphinx-doc.org/contents.html</a></p>
+<div class="section" id="biezaca-dokumentacja">
+<h2>1.1. Bieżąca dokumentacja<a class="headerlink" href="#biezaca-dokumentacja" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>w formacie <tt class="docutils literal"><span class="pre">HTML</span></tt> dostępna pod adresem <a class="reference external" href="https://rst.ses-support.net">https://rst.ses-support.net</a></li>
+<li>w formacie <tt class="docutils literal"><span class="pre">PDF</span></tt> dostępna pod adresem <a class="reference external" href="https://rst.ses-support.net/docs/pdf/document.pdf">https://rst.ses-support.net/docs/pdf/document.pdf</a></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="komentarze">
+<h2>1.2. Komentarze<a class="headerlink" href="#komentarze" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Komentarz jednoliniowy:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="cp">.. To jest komentarz.</span>
+</pre></div>
+</div>
+<p>Można wcinać tekst po rozpoczęciu komentarza aby uzyskać efekt komentarza wielonliniowego:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span class="cp">..</span>
+<span class="cp">   Ten cały wcięty blok</span>
+<span class="cp">   jest komentarzem.</span>
+
+<span class="cp">   I tu nadal jest komentarz.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="formatowanie-tekstu">
+<h2>1.3. Formatowanie tekstu<a class="headerlink" href="#formatowanie-tekstu" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>To jest nieformatowany tekst, <em>a to jest kursywa</em>, <strong>to jest pogrubienie</strong>,
+<tt class="docutils literal"><span class="pre">to</span> <span class="pre">jest</span> <span class="pre">przykład</span> <span class="pre">kodu</span></tt> i znów nieformatowany tekst.</p>
+<div class="highlight-rst"><div class="highlight"><pre>To jest nieformatowany tekst, <span class="ge">*a to jest kursywa*</span>, <span class="gs">**to jest pogrubienie**</span>,
+<span class="s">``to jest przykład kodu``</span> i znów nieformatowany tekst.
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo_sescom.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Spis treści</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">1. Podstawowe elementy</a><ul>
+<li><a class="reference internal" href="#biezaca-dokumentacja">1.1. Bieżąca dokumentacja</a></li>
+<li><a class="reference internal" href="#komentarze">1.2. Komentarze</a></li>
+<li><a class="reference internal" href="#formatowanie-tekstu">1.3. Formatowanie tekstu</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Poprzedni temat</h4>
+  <p class="topless"><a href="../index.html"
+                        title="poprzedni rozdział">Dokumentacja generowana przez Sphinx DocUtils</a></p>
+  <h4>Następny temat</h4>
+  <p class="topless"><a href="headers.html"
+                        title="następny rozdział">2. Nagłówki</a></p>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Nawigacja</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Indeks ogólny"
+             >indeks</a></li>
+        <li class="right" >
+          <a href="headers.html" title="2. Nagłówki"
+             >dalej</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Dokumentacja generowana przez Sphinx DocUtils"
+             >wstecz</a> |</li>
+        <li><a href="../index.html">Dokumentacja generowana przez Sphinx DocUtils 1.0 - dokumentacja</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Jacek Siciarek.
+      Utworzone przy pomocy <a href="http://sphinx-doc.org/">Sphinx</a>'a 1.2.2.
+    </div>
+  </body>
+</html>

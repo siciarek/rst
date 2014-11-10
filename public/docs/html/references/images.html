@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>8. Ilustracje &mdash; Dokumentacja generowana przez Sphinx DocUtils 1.0 - dokumentacja</title>
+    
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <link rel="top" title="Dokumentacja generowana przez Sphinx DocUtils 1.0 - dokumentacja" href="../index.html" />
+    <link rel="next" title="9. Odnośniki" href="links.html" />
+    <link rel="prev" title="7. Tabele" href="tables.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Nawigacja</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Indeks ogólny"
+             accesskey="I">indeks</a></li>
+        <li class="right" >
+          <a href="links.html" title="9. Odnośniki"
+             accesskey="N">dalej</a> |</li>
+        <li class="right" >
+          <a href="tables.html" title="7. Tabele"
+             accesskey="P">wstecz</a> |</li>
+        <li><a href="../index.html">Dokumentacja generowana przez Sphinx DocUtils 1.0 - dokumentacja</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ilustracje">
+<h1>8. Ilustracje<a class="headerlink" href="#ilustracje" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Ilustracje podzielone są na obrazki <tt class="docutils literal"><span class="pre">..</span> <span class="pre">image::</span></tt> i ilustracje <tt class="docutils literal"><span class="pre">..</span> <span class="pre">figure::</span></tt>.</p>
+<div class="section" id="obrazek-prosty">
+<h2>8.1. Obrazek prosty<a class="headerlink" href="#obrazek-prosty" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<img alt="../_images/flower.jpg" src="../_images/flower.jpg" />
+<hr class="docutils" />
+<img alt="../_images/flower.jpg" src="../_images/flower.jpg" />
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/flower.png
+
+---------------------------------------------------------
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/flower.*
+</pre></div>
+</div>
+</div>
+<div class="section" id="obrazek-parametryzowany">
+<h2>8.2. Obrazek parametryzowany<a class="headerlink" href="#obrazek-parametryzowany" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/flower.jpg"><img alt="Taki sobie kwiatek" class="align-center" src="../_images/flower.jpg" style="width: 320.0px; height: 240.0px;" /></a>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/flower.*
+    <span class="nc">:width:</span> <span class="nf">640 px</span>
+    <span class="nc">:height:</span> <span class="nf">480 px</span>
+    <span class="nc">:scale:</span> <span class="nf">50 %</span>
+    <span class="nc">:alt:</span> <span class="nf">Taki sobie kwiatek</span>
+    <span class="nc">:align:</span> <span class="nf">center</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="obrazek-skalowany">
+<span id="trzeci"></span><h2>8.3. Obrazek skalowany<a class="headerlink" href="#obrazek-skalowany" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/sunset.jpg"><img alt="../_images/sunset.jpg" src="../_images/sunset.jpg" style="width: 64.0px; height: 48.0px;" /></a>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/sunset.jpg"><img alt="../_images/sunset.jpg" src="../_images/sunset.jpg" style="width: 320.0px; height: 240.0px;" /></a>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/sunset.jpg"><img alt="../_images/sunset.jpg" src="../_images/sunset.jpg" style="width: 480.0px; height: 360.0px;" /></a>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/sunset.jpg"><img alt="../_images/sunset.jpg" src="../_images/sunset.jpg" style="width: 640.0px; height: 480.0px;" /></a>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/sunset.jpg"><img alt="../_images/sunset.jpg" src="../_images/sunset.jpg" style="width: 960.0px; height: 720.0px;" /></a>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/sunset.*
+    <span class="nc">:width:</span> <span class="nf">640 px</span>
+    <span class="nc">:height:</span> <span class="nf">480 px</span>
+    <span class="nc">:scale:</span> <span class="nf">10 %</span>
+
+---------------------------------------------------------
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/sunset.*
+    :width: 640 px
+    <span class="nc">:height:</span> <span class="nf">480 px</span>
+    <span class="nc">:scale:</span> <span class="nf">50 %</span>
+
+---------------------------------------------------------
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/sunset.*
+    :width: 640 px
+    <span class="nc">:height:</span> <span class="nf">480 px</span>
+    <span class="nc">:scale:</span> <span class="nf">75 %</span>
+
+---------------------------------------------------------
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/sunset.*
+    :width: 640 px
+    <span class="nc">:height:</span> <span class="nf">480 px</span>
+    <span class="nc">:scale:</span> <span class="nf">100 %</span>
+
+---------------------------------------------------------
+
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> /images/sunset.*
+    :width: 640 px
+    <span class="nc">:height:</span> <span class="nf">480 px</span>
+    <span class="nc">:scale:</span> <span class="nf">150 %</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>8.4. Ilustracje<a class="headerlink" href="#id1" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Ilustracje są obiektami zawierającymi obrazek oraz opcjonalnie elementy <tt class="docutils literal"><span class="pre">caption</span></tt> i <tt class="docutils literal"><span class="pre">legend</span></tt>.
+W przypadku generowania dokumentacji tylko w formacie <tt class="docutils literal"><span class="pre">html</span></tt> nie różnią się od <tt class="docutils literal"><span class="pre">image</span></tt>, w przypadku <tt class="docutils literal"><span class="pre">pdf</span></tt>
+element <tt class="docutils literal"><span class="pre">caption</span></tt> (pierwszy akapit pod definicją) dodstaje swój numer ilustracji.</p>
+<div class="figure" style="width: 300pt">
+<a class="reference internal image-reference" href="../_images/map.png"><img alt="map to buried treasure" src="../_images/map.png" style="width: 300pt;" /></a>
+<p class="caption">This is the caption of the figure (a simple paragraph).</p>
+<div class="legend">
+<p>The legend consists of all elements after the caption. In this
+case, the legend consists of this paragraph and the following
+table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="57%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Symbol</th>
+<th class="head">Meaning</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="../_images/tent.png" class="first last" src="../_images/tent.png" />
+</td>
+<td>Campground</td>
+</tr>
+<tr class="row-odd"><td><img alt="../_images/waves.png" class="first last" src="../_images/waves.png" />
+</td>
+<td>Waves</td>
+</tr>
+<tr class="row-even"><td><img alt="../_images/peak.png" class="first last" src="../_images/peak.png" />
+</td>
+<td>Mountain</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> /images/map.png
+    <span class="nc">:figwidth:</span> <span class="nf">300 pt</span>
+    <span class="nc">:width:</span> <span class="nf">300 pt</span>
+    <span class="nc">:alt:</span> <span class="nf">map to buried treasure</span>
+
+    This is the caption of the figure (a simple paragraph).
+
+    The legend consists of all elements after the caption. In this
+    case, the legend consists of this paragraph and the following
+    table:
+
+    +------------------------------+-----------------------+
+    | Symbol                       | Meaning               |
+    +==============================+=======================+
+    <span class="o">|</span> .. image:: /images/tent.png  | Campground            |
+    +------------------------------+-----------------------+
+    <span class="o">|</span> .. image:: /images/waves.png | Waves                 |
+    +------------------------------+-----------------------+
+    <span class="o">|</span> .. image:: /images/peak.png  | Mountain              |
+    +------------------------------+-----------------------+
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo_sescom.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Spis treści</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">8. Ilustracje</a><ul>
+<li><a class="reference internal" href="#obrazek-prosty">8.1. Obrazek prosty</a></li>
+<li><a class="reference internal" href="#obrazek-parametryzowany">8.2. Obrazek parametryzowany</a></li>
+<li><a class="reference internal" href="#obrazek-skalowany">8.3. Obrazek skalowany</a></li>
+<li><a class="reference internal" href="#id1">8.4. Ilustracje</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Poprzedni temat</h4>
+  <p class="topless"><a href="tables.html"
+                        title="poprzedni rozdział">7. Tabele</a></p>
+  <h4>Następny temat</h4>
+  <p class="topless"><a href="links.html"
+                        title="następny rozdział">9. Odnośniki</a></p>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Nawigacja</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Indeks ogólny"
+             >indeks</a></li>
+        <li class="right" >
+          <a href="links.html" title="9. Odnośniki"
+             >dalej</a> |</li>
+        <li class="right" >
+          <a href="tables.html" title="7. Tabele"
+             >wstecz</a> |</li>
+        <li><a href="../index.html">Dokumentacja generowana przez Sphinx DocUtils 1.0 - dokumentacja</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Jacek Siciarek.
+      Utworzone przy pomocy <a href="http://sphinx-doc.org/">Sphinx</a>'a 1.2.2.
+    </div>
+  </body>
+</html>
