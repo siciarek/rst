@@ -1,6 +1,5 @@
 <?php
 header('Content-type: text/plain;charset=UTF-8');
-
 $data = <<<CSV
 "pracownik","dział","liczba pobrań"
 "Agnieszka Bachanek","IT","1464"
@@ -12,5 +11,4 @@ $data = <<<CSV
 "Marcin Paździorko","Handel","476"
 "Marcin Bizewski","RKS","421"
 CSV;
-
 echo $data;

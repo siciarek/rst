@@ -5,49 +5,42 @@
 <project name="document" basedir="." default="doc">
 
     <property name="sphinx.build" value="sphinx-build" />
-    <property name="doc.source.dir"
-              value="src/Application/MainBundle/Resources/doc"/>
-    <property name="doc.html.target.dir" value="public/docs/html"/>
-    <property name="doc.pdf.target.dir" value="public/docs/pdf"/>
+    <property name="doc.source.dir" value="src/Application/MainBundle/Resources/doc"/>
+    <property name="doc.html.target.dir" value="public/doc"/>
+    <property name="doc.pdf.target.dir" value="public/doc/pdf"/>
 
-    <target name="doc" depends="doc-html, doc-pdf, dir"
-            description="Generowanie dokumentacji projektu"/>
+    <target name="ge" description="Generowanie encji">
+        <exec executable="${php}">
+            <arg line="app/console doctrine:generate:entities ApplicationMainBundle --no-backup"/>
+        </exec>
+    </target>
+    
+    <target name="fix" description="Wprowadzenie danych domyślnych do bazy">
+        <exec executable="${php}">
+            <arg line="app/console doctrine:fixtures:load --no-interaction"/>
+        </exec>
+    </target>
 
-    <target name="doc-html"
-            description="Generowanie dokumentacji projektu w formacie HTML">
+    <target name="doc" depends="doc-html, doc-pdf" description="Generowanie dokumentacji projektu"/>
+
+    <target name="doc-html" description="Generowanie dokumentacji projektu w formacie HTML">
         <exec executable="${sphinx.build}">
             <arg line="-E -a -b html ${doc.source.dir} ${doc.html.target.dir}"/>
         </exec>
     </target>
 
-    <target name="doc-pdf"
-            description="Generowanie dokumentacji projektu w formacie PDF">
+    <target name="doc-pdf" description="Generowanie dokumentacji projektu w formacie PDF">
+        <mkdir dir="${doc.pdf.target.dir}"/>
         <exec executable="${sphinx.build}">
             <arg line="-E -a -b latex ${doc.source.dir} ${doc.pdf.target.dir}"/>
         </exec>
         <exec executable="make" dir="${doc.pdf.target.dir}"/>
-        <delete verbose="true" includeemptydirs="true">
-            <fileset dir="${doc.pdf.target.dir}" excludes="*.pdf"
-                     includes="**/*"/>
+        <copy file="${doc.pdf.target.dir}/${ant.project.name}.pdf" todir="${doc.html.target.dir}"/>
+        <delete includeEmptyDirs="true">
+            <fileset dir="${doc.pdf.target.dir}"/>
         </delete>
-
     </target>
-
-    <target name="dir" depends="dir-html, dir-pdf" />
-
-    <target name="dir-pdf">
-        <fileset id="pdf.contents" dir="${doc.pdf.target.dir}"
-                 includes="*.pdf" />
-        <property name="prop.pdf.contents" refid="pdf.contents"/>
-        <echo>${prop.pdf.contents}</echo>
-    </target>
-
-    <target name="dir-html">
-        <fileset id="html.contents" dir="${doc.html.target.dir}"
-                 includes="index.html" />
-        <property name="prop.html.contents" refid="html.contents"/>
-        <echo>${prop.html.contents}</echo>
-    </target>
-
+    
+    
 </project>
 
